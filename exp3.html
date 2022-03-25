@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exp3</title>
+</head>
+<body>
+    <div class="main">
+        <input type="text" class="inputtxt">
+        <button onclick="myFunction()"></button><br><br>
+        <p></p>
+    </div>
+    <script>
+       var input;
+       var txt = document.querySelector('p');
+       function myFunction(){
+            input = document.querySelector('.inputtxt').value;
+            var ans = input.split('').map(char => String.fromCharCode(char.charCodeAt(0)+1)).join('');
+            console.log(ans);
+            txt.textContent = ans;
+       } 
+    </script>
+</body>
+</html>
