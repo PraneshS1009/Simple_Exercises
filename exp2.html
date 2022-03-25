@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <input type="text" class="filename">
+        <button onclick="myFunction()">Submit</button><br><br>
+        <p></p>
+    </div>
+    <script>
+        var filename;
+        var txt = document.querySelector('p');
+        function myFunction(){
+            filename =  document.querySelector('.filename').value;
+            console.log(filename);
+            txt.textContent = filename.slice(filename.lastIndexOf('.'));
+        }
+        console.log(filename);
+    </script>
+</body>
+</html>
