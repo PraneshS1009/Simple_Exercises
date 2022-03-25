@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="inner">
+            <input class="a1" type="number">
+            <input class="b1" type="number">
+            <button onclick="myFunction()">Submit</button><br><br>
+            <p></p>
+        </div>
+    </div>
+    <script>
+        var a;
+        var b;
+        var txt = document.querySelector('p');
+        function myFunction(){
+            a = document.querySelector('.a1').value;
+            b = document.querySelector('.b1').value;
+            a=parseInt(a);
+            b=parseInt(b);
+            if(a=== 100 || b=== 100 || (a+b)=== 100){
+                txt.textContent= 'True';
+            } else {
+                txt.textContent= 'False';
+            }
+            console.log(a+b);
+        }
+    </script>
+</body>
+</html>
